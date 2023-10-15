@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OptionMove : MonoBehaviour
 { 
-    public string parent;
+    private string parent;
     void Start()
     {
         parent = gameObject.transform.parent.name;
@@ -18,6 +18,5 @@ public class OptionMove : MonoBehaviour
         {
             gameObject.transform.SetParent(GameObject.Find(parent).transform);
         }
-         
     }
 }

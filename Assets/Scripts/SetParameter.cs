@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GetParameter : MonoBehaviour
+public class SetParameter : MonoBehaviour
 {
     public void SetMode(bool _mode){
         GlobalData.mode = _mode;
