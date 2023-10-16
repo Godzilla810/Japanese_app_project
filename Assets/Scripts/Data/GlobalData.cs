@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
 public static class GlobalData
 {
-    public static bool mode;
-    public static int level;
+    public static bool mode = false;
+    public static int chapter = 1;
 }

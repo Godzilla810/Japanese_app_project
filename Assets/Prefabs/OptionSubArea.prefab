@@ -98,7 +98,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 150, y: 150}
+  m_CellSize: {x: 135, y: 135}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -109,6 +109,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5130724400829683808}
     m_Modifications:
+    - target: {fileID: 3923583936377026337, guid: 8b1dab5c22b0750439bc95a1f66d5a32, type: 3}
+      propertyPath: scaleFactor
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 5958596311790297037, guid: 8b1dab5c22b0750439bc95a1f66d5a32, type: 3}
       propertyPath: m_Name
       value: Option
@@ -201,6 +205,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8566221569097053563, guid: 8b1dab5c22b0750439bc95a1f66d5a32, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8142382923352405730}
+    - target: {fileID: 8566221569097053563, guid: 8b1dab5c22b0750439bc95a1f66d5a32, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Option, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b1dab5c22b0750439bc95a1f66d5a32, type: 3}
 --- !u!224 &1347287569254762643 stripped
@@ -208,3 +220,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6070383950070860112, guid: 8b1dab5c22b0750439bc95a1f66d5a32, type: 3}
   m_PrefabInstance: {fileID: 5083667798900474307}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8142382923352405730 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3923583936377026337, guid: 8b1dab5c22b0750439bc95a1f66d5a32, type: 3}
+  m_PrefabInstance: {fileID: 5083667798900474307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 753e2fd51974c144ebed1fcbcc7309a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

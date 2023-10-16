@@ -5,10 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class SetParameter : MonoBehaviour
 {
+    //設定模式
     public void SetMode(bool _mode){
         GlobalData.mode = _mode;
     }
-    public void SetLevel(int _level){
-        GlobalData.level = _level;
+    //設定章節
+    public void SetLevel(int _chapter){
+        GlobalData.chapter = _chapter;
+    }
+    //設定下一幕
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

@@ -5,35 +5,44 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    public static GameController instance;
+    void Awake() {
+        if (instance != null){
+            return;
+        }
+        instance = this;
+    }
     public LevelGenerator levelGenerator;
     public OptionGenerator optionGenerator;
-    public AnswerChecker answerChecker;
     public UIController uiController;
     private int currentLevel;
-    private bool isAnswerCorrect;
+    [HideInInspector]
+    public string playerAnswer;
+    [HideInInspector]
+    public string trueAnswer;
     void Start()
     {
         StartLevel(currentLevel);
     }
     void Update()
     {
-        isAnswerCorrect = answerChecker.CheckAnswer();
-        if (isAnswerCorrect)
-        {
-            Debug.Log("right");
+        Debug.Log(playerAnswer + "/" + trueAnswer);
+        if (playerAnswer == trueAnswer){
+            StartLevel(currentLevel);
         }
     }
     public void StartLevel(int levelIndex)
     {
-        LevelData level = levelGenerator.GenerateLevel(levelIndex);
-        if (level != null)
+        LevelData levelData = levelGenerator.GenerateLevel(levelIndex);
+        if (levelData != null)
         {
             //產生選項
-            OptionData[] options = optionGenerator.GenerateOptions(level);
-            //送答案
-            answerChecker.SetAnswer(level.pinyin);
+            List<Sprite> optionImg = optionGenerator.GenerateOptions(levelData.answerImg);
+            //清空+獲取答案
+            playerAnswer = "";
+            trueAnswer = levelData.pinyin.ToLower();
             //呈現關卡資料以及選項
-            uiController.Display(level, options);
+            uiController.SetUp(levelData, optionImg);
             currentLevel++;
         }
     }

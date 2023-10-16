@@ -310,7 +310,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 519420033}
-        m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
+        m_TargetAssemblyTypeName: SetParameter, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
@@ -453,7 +453,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bffc2dc4cb94bd45ba8dfbc3237ac30, type: 3}
+  m_Script: {fileID: 11500000, guid: 4bf7fa2ffaaaeb849804024dd41d4106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &773187224

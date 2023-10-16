@@ -10,14 +10,17 @@ public class UIController : MonoBehaviour
     public TextMeshProUGUI pinyin;
     public AudioSource soundBtn;
     public GameObject[] options;
-    public void Display(LevelData levelData, OptionData[] optionDatas)
+    public void SetUp(LevelData levelData, List<Sprite> optionImg)
     {
+        //LevelData
         image.GetComponent<Image>().sprite = levelData.image;
         pinyin.text = levelData.pinyin;
         soundBtn.clip = levelData.audio;
-        for (int i = 0; i < optionDatas.Length; i++)
+        //OptionData
+        for (int i = 0; i < optionImg.Count; i++)
         {
-            options[i].GetComponent<Image>().sprite = optionDatas[i].image;
+            options[i].GetComponent<Option>().ChangeParentToOptionArea();
+            options[i].GetComponent<Image>().sprite = optionImg[i];
         }
     }
 }
