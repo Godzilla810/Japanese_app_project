@@ -10,7 +10,7 @@ public class SetParameter : MonoBehaviour
         GlobalData.mode = _mode;
     }
     //設定章節
-    public void SetLevel(int _chapter){
+    public void SetChapter(int _chapter){
         GlobalData.chapter = _chapter;
     }
     //設定下一幕

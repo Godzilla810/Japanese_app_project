@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class OptionGenerator : MonoBehaviour
 {
-    public int optionsNumber;
+    private int optionsNumber;
     private List<Sprite> optionImg = new List<Sprite>();
     private List<Sprite> JPCharsImg = new List<Sprite>();
     private void Awake() {
         SetAllJPChars();
+        optionsNumber = GameObject.Find("Template").GetComponent<UIController>().options.Length;
     }
     public List<Sprite> GenerateOptions(List<Sprite> answerImg)
     {

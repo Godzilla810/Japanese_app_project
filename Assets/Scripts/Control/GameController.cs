@@ -12,23 +12,34 @@ public class GameController : MonoBehaviour
         }
         instance = this;
     }
+    //彙整腳本
     public LevelGenerator levelGenerator;
     public OptionGenerator optionGenerator;
     public UIController uiController;
-    private int currentLevel;
+    //檢查答案
     [HideInInspector]
     public string playerAnswer;
     [HideInInspector]
     public string trueAnswer;
+    //變數
+    private int currentLevel;
+    private bool mode;
+    private int chapter;
+
     void Start()
     {
+        // mode = GlobalData.mode;
+        // chapter = GlobalData.chapter;
         StartLevel(currentLevel);
     }
     void Update()
     {
         Debug.Log(playerAnswer + "/" + trueAnswer);
-        if (playerAnswer == trueAnswer){
-            StartLevel(currentLevel);
+        if (playerAnswer == trueAnswer)
+        {
+            playerAnswer = "";
+            uiController.ShowCorrect();
+            StartCoroutine(WaitAndStartLevel());
         }
     }
     public void StartLevel(int levelIndex)
@@ -36,14 +47,20 @@ public class GameController : MonoBehaviour
         LevelData levelData = levelGenerator.GenerateLevel(levelIndex);
         if (levelData != null)
         {
-            //產生選項
+            //產生關卡選項
             List<Sprite> optionImg = optionGenerator.GenerateOptions(levelData.answerImg);
-            //清空+獲取答案
-            playerAnswer = "";
+            //獲取正確答案
             trueAnswer = levelData.pinyin.ToLower();
-            //呈現關卡資料以及選項
+            //呈現關卡資料
             uiController.SetUp(levelData, optionImg);
+
             currentLevel++;
         }
+    }
+    IEnumerator WaitAndStartLevel()
+    {
+        yield return new WaitForSeconds(0.5f);
+        uiController.HideFeedBack();
+        StartLevel(currentLevel);
     }
 }
