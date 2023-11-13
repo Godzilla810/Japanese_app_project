@@ -23,22 +23,30 @@ public class GameController : MonoBehaviour
     public string trueAnswer;
     //變數
     private int currentLevel;
-    private bool mode;
-    private int chapter;
+    private int error = 0;
 
     void Start()
     {
-        // mode = GlobalData.mode;
-        // chapter = GlobalData.chapter;
         StartLevel(currentLevel);
     }
     void Update()
     {
         Debug.Log(playerAnswer + "/" + trueAnswer);
+        //檢查正確
         if (playerAnswer == trueAnswer)
         {
+            uiController.isReset = true;
             playerAnswer = "";
             uiController.ShowCorrect();
+            StartCoroutine(WaitAndStartLevel());
+        }
+        //檢查錯誤
+        else if (uiController.isTimesUp)
+        {
+            uiController.isTimesUp = false;
+            error++;
+            playerAnswer = "";
+            uiController.ShowWrong();
             StartCoroutine(WaitAndStartLevel());
         }
     }
@@ -53,8 +61,20 @@ public class GameController : MonoBehaviour
             trueAnswer = levelData.pinyin.ToLower();
             //呈現關卡資料
             uiController.SetUp(levelData, optionImg);
-
+            if (GlobalData.mode)
+            {
+                //計時
+                StartCoroutine(uiController.StartTimer());
+            }
             currentLevel++;
+        }
+        //章節結束
+        else
+        {
+            if (error < 3)
+                uiController.ShowGoodEnd();
+            else
+                uiController.ShowBadEnd();
         }
     }
     IEnumerator WaitAndStartLevel()

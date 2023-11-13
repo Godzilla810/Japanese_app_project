@@ -44,7 +44,6 @@ public class LevelGenerator : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Invalid level index.");
             return null;
         }
     }
