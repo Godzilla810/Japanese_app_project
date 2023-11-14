@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,21 +26,65 @@ public class LevelData
         string standardString = pinyin.ToLower();
         //建立放小字串的空字串
         string currentSubString = string.Empty;
+        //建立N的特例
+        bool encounterN = false;
+        //建立抝音的特例
+        string[] searchStrings = {"cha", "chu", "cho", "sha", "shu", "sho", "ja", "ju", "jo"};
+
+
         foreach (char character in standardString)
         {
-            //遇到母音:結束片段
-            if (character == 'a' || character == 'e' || character == 'i' || character == 'o' || character == 'u' || character == 'n' || character == '-')
+            if (character == '-')
+            {
+                answer.Add("-");
+            }
+            //遇到N:先標記，如果接下來是子音，就結束片段
+            else if (character == 'n')
             {
                 currentSubString += character.ToString();
-                answer.Add(currentSubString);
+                encounterN = true;
+            }
+            //遇到母音:結束片段
+            else if (character == 'a' || character == 'e' || character == 'i' || character == 'o' || character == 'u')
+            {
+                encounterN = false;
+                currentSubString += character.ToString();
+                //抝音
+                if (currentSubString.Length > 2 && currentSubString != "shi" && currentSubString != "chi")
+                {
+                    string firstWord;
+                    string secondWord = "ya";
+                    if (searchStrings.Any(s => currentSubString.Contains(s)))
+                    {
+                        firstWord = currentSubString.Substring(0, currentSubString.Length - 1) + "i";
+                    }
+                    else
+                    {
+                        firstWord = currentSubString.Substring(0, currentSubString.Length - 2) + "i";
+                    }
+                    answer.Add(firstWord);
+                    answer.Add(secondWord);
+                }
+                else
+                {
+                    answer.Add(currentSubString);
+                }
                 currentSubString = string.Empty;
             }
             //遇到子音:加入片段
             else
             {
+                if (encounterN)
+                {
+                    encounterN = false;
+                    answer.Add(currentSubString);
+                    currentSubString = string.Empty;
+                }
                 currentSubString += character.ToString();
             }
         }
+        //輸出句尾的N
+        answer.Add(currentSubString);
     }
     private void SetAnswerImage()
     {

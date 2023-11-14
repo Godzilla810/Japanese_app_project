@@ -7267,13 +7267,13 @@ MonoBehaviour:
     audio: {fileID: 0}
   chapter9:
   - image: {fileID: 21300000, guid: a83e8448ce15b68478b66195fbeef607, type: 3}
-    pinyin: JinRiKiShiYa
+    pinyin: JinRiKiSha
     audio: {fileID: 8300000, guid: 567a57e4b9db6884d8fd2c4c3d9a4ca0, type: 3}
   - image: {fileID: 0}
     pinyin: ChiNoRe-Ru
     audio: {fileID: 8300000, guid: 6f285ca293e602042aa8445150280e6f, type: 3}
   - image: {fileID: 0}
-    pinyin: BaIKu
+    pinyin: BaiKu
     audio: {fileID: 8300000, guid: 1b65619678890ae46932bbf5219f5e09, type: 3}
   - image: {fileID: 0}
     pinyin: ShinKanSen
@@ -7285,13 +7285,13 @@ MonoBehaviour:
     pinyin: FueRi-
     audio: {fileID: 8300000, guid: fa6eb752e1824f44e9c4dbda0f9ab7db, type: 3}
   - image: {fileID: 0}
-    pinyin: KiShiya
+    pinyin: KiSha
     audio: {fileID: 8300000, guid: abbd2087708978246b2e5168eddecbc5, type: 3}
   - image: {fileID: 0}
     pinyin: HiKouKi
     audio: {fileID: 8300000, guid: 0ef9b5fc271342e4b8ec05af9beee64f, type: 3}
   - image: {fileID: 0}
-    pinyin: JiTenShiya
+    pinyin: JiTenSha
     audio: {fileID: 8300000, guid: 0da10e9c8e227984aabb791180f8d1bc, type: 3}
   - image: {fileID: 0}
     pinyin: FuNe

@@ -95,7 +95,7 @@ public class GameController : MonoBehaviour
     void BuildLevel(LevelData levelData)
     {
         List<Sprite> optionImg = optionGenerator.GenerateOptions(levelData.answerImg);
-        trueAnswer = levelData.pinyin.ToLower();
+        trueAnswer = string.Join("", levelData.answer);
         uiController.SetUp(levelData, optionImg);
     }
 

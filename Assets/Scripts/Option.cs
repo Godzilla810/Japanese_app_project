@@ -17,19 +17,19 @@ public class Option : MonoBehaviour
         if (this.transform.parent == GameObject.Find(parent).transform)
         {
             gameController.playerAnswer += this.GetComponent<Image>().sprite.name;
-            ChangeParentToAnswerArea();
+            ChangeToAnswerArea();
         }
         else
         {
             gameController.playerAnswer = gameController.playerAnswer.Replace(this.GetComponent<Image>().sprite.name, "");
-            ChangeParentToOptionArea();
+            ChangeToOptionArea();
         }
     }
-    public void ChangeParentToAnswerArea(){
+    public void ChangeToAnswerArea(){
         this.transform.SetParent(GameObject.Find("AnswerArea").transform);  
         this.transform.localScale = new Vector3(scaleFactor, scaleFactor, scaleFactor);
     }
-    public void ChangeParentToOptionArea(){
+    public void ChangeToOptionArea(){
         if (parent != null){
             this.transform.SetParent(GameObject.Find(parent).transform);
             this.transform.localScale = new Vector3(1, 1, 1);

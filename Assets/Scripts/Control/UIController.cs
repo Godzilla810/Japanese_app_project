@@ -41,7 +41,7 @@ public class UIController : MonoBehaviour
         //OptionData
         for (int i = 0; i < optionImg.Count; i++)
         {
-            options[i].GetComponent<Option>().ChangeParentToOptionArea();
+            options[i].GetComponent<Option>().ChangeToOptionArea();
             options[i].GetComponent<Image>().sprite = optionImg[i];
         }
     }
