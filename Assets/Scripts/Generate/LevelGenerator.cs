@@ -42,9 +42,6 @@ public class LevelGenerator : MonoBehaviour
             currentChapter[levelIndex].pinyin, currentChapter[levelIndex].audio);
             return levelData;
         }
-        else
-        {
-            return null;
-        }
+        return null;
     }
 }

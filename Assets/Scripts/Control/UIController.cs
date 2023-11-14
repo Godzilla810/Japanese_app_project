@@ -6,6 +6,7 @@ using TMPro;
 
 public class UIController : MonoBehaviour
 {
+    //物件
     public GameObject slider;
     public GameObject image;
     public GameObject pinyin;
@@ -14,35 +15,41 @@ public class UIController : MonoBehaviour
     public GameObject wrong;
     public GameObject goodEnd;
     public GameObject badEnd;
+    public GameObject pausePanel;
     public GameObject[] options;
+    //參數
     public float limitedTime = 10.0f;
     public bool isTimesUp = false;
     public bool isReset = false;
-    private void Start() {
-        //學習模式
-        if (!GlobalData.mode)
-        {
-            slider.SetActive(false);
-        }
-        //挑戰模式
-        else{
+    //控制元件
+    private Slider sliderTimer;
+    private Sprite imageSprite;
+    private TextMeshProUGUI pinyinText;
+    private AudioSource soundAudio;
+    private void Awake() 
+    {
+        sliderTimer = slider.GetComponent<Slider>();
+        imageSprite = image.GetComponent<Image>().sprite;
+        pinyinText = pinyin.GetComponent<TextMeshProUGUI>();
+        soundAudio = soundBtn.GetComponent<AudioSource>();
+    }
+    public void SetUpLearnModeUI()
+    {
+        slider.SetActive(false);
+    }
+    public void SetUpChallengeModeUI(){
             slider.SetActive(true);
-            slider.GetComponent<Slider>().minValue = 0.0f;
-            slider.GetComponent<Slider>().maxValue = limitedTime;
-            slider.GetComponent<Slider>().value = limitedTime;
-            //基礎題
-            if (GlobalData.chapter <= 8)
-            {
-                image.SetActive(false);
-                soundBtn.SetActive(false);
-            }
-            //進階題
-            else
-            {
-                pinyin.SetActive(false);
-                soundBtn.SetActive(false);
-            }
-        }
+            sliderTimer.minValue = 0.0f;
+            sliderTimer.maxValue = limitedTime;
+            sliderTimer.value = limitedTime;
+    }
+    public void SetUpBasicTopicUI(){
+        image.SetActive(false);
+        soundBtn.SetActive(false);
+    }
+    public void SetUpAdvancedTopicUI(){
+        pinyin.SetActive(false);
+        soundBtn.SetActive(false);
     }
     public IEnumerator StartTimer()
     {
@@ -50,7 +57,7 @@ public class UIController : MonoBehaviour
         while (currentTime > 0.0f)
         {
             currentTime -= Time.deltaTime;
-            slider.GetComponent<Slider>().value = currentTime;
+            sliderTimer.value = currentTime;
             yield return null;
             if (isReset)
             {
@@ -64,9 +71,9 @@ public class UIController : MonoBehaviour
     public void SetUp(LevelData levelData, List<Sprite> optionImg)
     {
         //LevelData
-        image.GetComponent<Image>().sprite = levelData.image;
-        pinyin.GetComponent<TextMeshProUGUI>().text = levelData.pinyin;
-        soundBtn.GetComponent<AudioSource>().clip = levelData.audio;
+        imageSprite = levelData.image;
+        pinyinText = levelData.pinyin;
+        soundAudio = levelData.audio;
         //OptionData
         for (int i = 0; i < optionImg.Count; i++)
         {
@@ -90,11 +97,16 @@ public class UIController : MonoBehaviour
     {
         badEnd.SetActive(true);
     }
+    public void ShowPause()
+    {
+        pausePanel.SetActive(true);
+    }
     public void HideFeedBack()
     {
         correct.SetActive(false);
         wrong.SetActive(false);
         goodEnd.SetActive(false);
         badEnd.SetActive(false);
+        pausePanel.SetActive(false);
     }
 }
