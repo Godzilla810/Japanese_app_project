@@ -1881,9 +1881,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8950040596619542573}
-        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
-        m_MethodName: HideFeedBack
+      - m_Target: {fileID: 7128898582796362226}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: Pause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2284,9 +2284,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8950040596619542573}
-        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
-        m_MethodName: ShowPause
+      - m_Target: {fileID: 7128898582796362226}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: Pause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6073,8 +6073,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6810,6 +6810,8 @@ MonoBehaviour:
   uiController: {fileID: 8950040596619542573}
   playerAnswer: 
   trueAnswer: 
+  limitedTime: 10
+  levelCount: 5
 --- !u!114 &7152578545521261085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7264,12 +7266,42 @@ MonoBehaviour:
     pinyin: 
     audio: {fileID: 0}
   chapter9:
+  - image: {fileID: 21300000, guid: a83e8448ce15b68478b66195fbeef607, type: 3}
+    pinyin: JinRiKiShiYa
+    audio: {fileID: 8300000, guid: 567a57e4b9db6884d8fd2c4c3d9a4ca0, type: 3}
   - image: {fileID: 0}
-    pinyin: 
-    audio: {fileID: 0}
+    pinyin: ChiNoRe-Ru
+    audio: {fileID: 8300000, guid: 6f285ca293e602042aa8445150280e6f, type: 3}
   - image: {fileID: 0}
-    pinyin: 
-    audio: {fileID: 0}
+    pinyin: BaIKu
+    audio: {fileID: 8300000, guid: 1b65619678890ae46932bbf5219f5e09, type: 3}
+  - image: {fileID: 0}
+    pinyin: ShinKanSen
+    audio: {fileID: 8300000, guid: f518e65c858213e49b8aa8ceedc8bee7, type: 3}
+  - image: {fileID: 0}
+    pinyin: KuRuMa
+    audio: {fileID: 8300000, guid: e970cbec8e46e79408915c5047eedd4d, type: 3}
+  - image: {fileID: 0}
+    pinyin: FueRi-
+    audio: {fileID: 8300000, guid: fa6eb752e1824f44e9c4dbda0f9ab7db, type: 3}
+  - image: {fileID: 0}
+    pinyin: KiShiya
+    audio: {fileID: 8300000, guid: abbd2087708978246b2e5168eddecbc5, type: 3}
+  - image: {fileID: 0}
+    pinyin: HiKouKi
+    audio: {fileID: 8300000, guid: 0ef9b5fc271342e4b8ec05af9beee64f, type: 3}
+  - image: {fileID: 0}
+    pinyin: JiTenShiya
+    audio: {fileID: 8300000, guid: 0da10e9c8e227984aabb791180f8d1bc, type: 3}
+  - image: {fileID: 0}
+    pinyin: FuNe
+    audio: {fileID: 8300000, guid: 98a79cfa4dc0fe7478f5d02163b9f4f5, type: 3}
+  - image: {fileID: 0}
+    pinyin: TaKuShi-
+    audio: {fileID: 8300000, guid: 3a79ce8a4f9697948be39d644b48ae71, type: 3}
+  - image: {fileID: 0}
+    pinyin: HiKouKi
+    audio: {fileID: 8300000, guid: d758ce30551f5ff4aa5088411a691712, type: 3}
   chapter10:
   - image: {fileID: 0}
     pinyin: 
@@ -7576,9 +7608,6 @@ MonoBehaviour:
   - {fileID: 7049571602383154339}
   - {fileID: 7640592276004219141}
   - {fileID: 2099443364960935194}
-  limitedTime: 10
-  isTimesUp: 0
-  isReset: 0
 --- !u!222 &9042805632222009850
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -28,7 +28,7 @@ public class LevelData
         foreach (char character in standardString)
         {
             //遇到母音:結束片段
-            if (character == 'a' || character == 'e' || character == 'i' || character == 'o' || character == 'u')
+            if (character == 'a' || character == 'e' || character == 'i' || character == 'o' || character == 'u' || character == 'n' || character == '-')
             {
                 currentSubString += character.ToString();
                 answer.Add(currentSubString);
