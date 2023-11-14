@@ -44,4 +44,9 @@ public class LevelGenerator : MonoBehaviour
         }
         return null;
     }
+    public int GetChapterLength()
+    {
+        currentChapter = chapters[GlobalData.chapter - 1];
+        return currentChapter.Length;
+    }
 }

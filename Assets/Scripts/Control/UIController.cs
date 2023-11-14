@@ -17,31 +17,12 @@ public class UIController : MonoBehaviour
     public GameObject badEnd;
     public GameObject pausePanel;
     public GameObject[] options;
-    //參數
-    public float limitedTime = 10.0f;
-    public bool isTimesUp = false;
-    public bool isReset = false;
-    //控制元件
-    private Slider sliderTimer;
-    private Sprite imageSprite;
-    private TextMeshProUGUI pinyinText;
-    private AudioSource soundAudio;
-    private void Awake() 
-    {
-        sliderTimer = slider.GetComponent<Slider>();
-        imageSprite = image.GetComponent<Image>().sprite;
-        pinyinText = pinyin.GetComponent<TextMeshProUGUI>();
-        soundAudio = soundBtn.GetComponent<AudioSource>();
-    }
     public void SetUpLearnModeUI()
     {
         slider.SetActive(false);
     }
     public void SetUpChallengeModeUI(){
             slider.SetActive(true);
-            sliderTimer.minValue = 0.0f;
-            sliderTimer.maxValue = limitedTime;
-            sliderTimer.value = limitedTime;
     }
     public void SetUpBasicTopicUI(){
         image.SetActive(false);
@@ -51,29 +32,12 @@ public class UIController : MonoBehaviour
         pinyin.SetActive(false);
         soundBtn.SetActive(false);
     }
-    public IEnumerator StartTimer()
-    {
-        float currentTime = limitedTime;
-        while (currentTime > 0.0f)
-        {
-            currentTime -= Time.deltaTime;
-            sliderTimer.value = currentTime;
-            yield return null;
-            if (isReset)
-            {
-                isReset = false;
-                yield break;
-            }
-        }
-        isTimesUp = true;
-        Debug.Log("end");
-    }
     public void SetUp(LevelData levelData, List<Sprite> optionImg)
     {
         //LevelData
-        imageSprite = levelData.image;
-        pinyinText = levelData.pinyin;
-        soundAudio = levelData.audio;
+        image.GetComponent<Image>().sprite = levelData.image;
+        pinyin.GetComponent<TextMeshProUGUI>().text = levelData.pinyin;
+        soundBtn.GetComponent<AudioSource>().clip = levelData.audio;
         //OptionData
         for (int i = 0; i < optionImg.Count; i++)
         {
