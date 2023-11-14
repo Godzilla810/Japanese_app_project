@@ -28,6 +28,7 @@ public class GameController : MonoBehaviour
     public float limitedTime = 10.0f;
     public int levelCount = 5;
 
+    public Transform answerArea;
     private bool isLearn;
     private int currentLevelIndex;
     private int error = 0;
@@ -183,6 +184,16 @@ public class GameController : MonoBehaviour
         {
             uiController.HideFeedBack();
             Time.timeScale = 1f; // 恢復正常時間流逝速度
+        }
+    }
+
+    public void GetPlayerAnswer()
+    {
+        playerAnswer = string.Empty;
+        for (int i = 0; i < answerArea.childCount; i++)
+        {
+            GameObject childObject = answerArea.GetChild(i).gameObject;
+            playerAnswer += childObject.GetComponent<Image>().sprite.name;
         }
     }
 }

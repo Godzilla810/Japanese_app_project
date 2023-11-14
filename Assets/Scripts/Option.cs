@@ -7,21 +7,17 @@ public class Option : MonoBehaviour
 {
     public float scaleFactor = 0.8f;
     private string parent;
-    private GameController gameController;
     void Start()
     {
         parent = this.transform.parent.name;
-        gameController = GameController.instance;
     }
     public void ChangeParent(){
         if (this.transform.parent == GameObject.Find(parent).transform)
         {
-            gameController.playerAnswer += this.GetComponent<Image>().sprite.name;
             ChangeToAnswerArea();
         }
         else
         {
-            gameController.playerAnswer = gameController.playerAnswer.Replace(this.GetComponent<Image>().sprite.name, "");
             ChangeToOptionArea();
         }
     }
