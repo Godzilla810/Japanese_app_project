@@ -31,7 +31,7 @@ public class LevelData
         Sprite[] sprites = Resources.LoadAll<Sprite>(folderPath);
         foreach (Sprite sprite in sprites)
         {
-            if (sprite.name == pinyin)
+            if (sprite.name == pinyin.ToLower())
             {
                 return sprite;
             } 
@@ -45,7 +45,7 @@ public class LevelData
         AudioClip[] audios = Resources.LoadAll<AudioClip>(folderPath);
         foreach (AudioClip audio in audios)
         {
-            if (audio.name == pinyin)
+            if (audio.name == pinyin.ToLower())
             {
                 return audio;
             } 
@@ -73,8 +73,17 @@ public class LevelData
             //遇到N:先標記，如果接下來是子音，就結束片段
             else if (character == 'n')
             {
-                currentSubString += character.ToString();
-                encounterN = true;
+                if (encounterN)
+                {
+                    encounterN = false;
+                    answer.Add(currentSubString);
+                    currentSubString = string.Empty;
+                }
+                else
+                {
+                    currentSubString += character.ToString();
+                    encounterN = true;
+                }
             }
             //遇到母音:結束片段
             else if (character == 'a' || character == 'e' || character == 'i' || character == 'o' || character == 'u')
@@ -82,20 +91,37 @@ public class LevelData
                 encounterN = false;
                 currentSubString += character.ToString();
                 //抝音
-                if (currentSubString.Length > 2 && currentSubString != "shi" && currentSubString != "chi")
+                if ((currentSubString.Length > 2 && currentSubString != "shi" && currentSubString != "chi") || 
+                    (currentSubString == "ja" || currentSubString == "ju" || currentSubString == "jo"))
                 {
                     string firstWord;
-                    string secondWord = "ya";
+                    string secondWord;
+                    //加i加y
+                    //e.g.cha
                     if (searchStrings.Any(s => currentSubString.Contains(s)))
                     {
+                        //ch i
                         firstWord = currentSubString.Substring(0, currentSubString.Length - 1) + "i";
+                        //y a
+                        secondWord = "y" + currentSubString[currentSubString.Length - 1];
                     }
+                    //加i
+                    //e.g.nya
                     else
                     {
+                        //n i
                         firstWord = currentSubString.Substring(0, currentSubString.Length - 2) + "i";
+                        //ya
+                        secondWord = currentSubString.Substring(currentSubString.Length - 2);
                     }
                     answer.Add(firstWord);
                     answer.Add(secondWord);
+                }
+                //其他特例：fe=>fue
+                else if (currentSubString == "fe")
+                {
+                    answer.Add("fu");
+                    answer.Add("e");
                 }
                 else
                 {
@@ -103,7 +129,7 @@ public class LevelData
                 }
                 currentSubString = string.Empty;
             }
-            //遇到子音:加入片段
+            //遇到n以外的子音:加入片段
             else
             {
                 if (encounterN)

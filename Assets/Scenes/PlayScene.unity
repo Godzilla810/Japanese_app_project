@@ -6154,7 +6154,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: NeKo
+  m_text: neko
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7380,101 +7380,99 @@ MonoBehaviour:
   - pinyin: 
     isKatakana: 0
   chapter9:
-  - pinyin: JinRiKiSha
-    isKatakana: 0
-  - pinyin: MoNoRe-Ru
+  - pinyin: bo-to
     isKatakana: 1
-  - pinyin: BaiKu
+  - pinyin: densha
+    isKatakana: 0
+  - pinyin: feri-
     isKatakana: 1
-  - pinyin: ShinKanSen
-    isKatakana: 0
-  - pinyin: KuRuMa
-    isKatakana: 0
-  - pinyin: FueRi-
+  - pinyin: herikoputa-
     isKatakana: 1
-  - pinyin: KiSha
+  - pinyin: hikouki
     isKatakana: 0
-  - pinyin: HiKouKi
+  - pinyin: jinrikisha
     isKatakana: 0
-  - pinyin: JiTenSha
+  - pinyin: jitensha
     isKatakana: 0
-  - pinyin: FuNe
-    isKatakana: 0
-  - pinyin: TaKuShi-
+  - pinyin: kisha
     isKatakana: 1
-  - pinyin: BaSu
+  - pinyin: monore-ru
     isKatakana: 1
-  - pinyin: HeRiKoPuTa-
+  - pinyin: otobai
+    isKatakana: 1
+  - pinyin: shinkansen
+    isKatakana: 0
+  - pinyin: takushi-
     isKatakana: 1
   chapter10:
-  - pinyin: Aka
+  - pinyin: aka
     isKatakana: 0
-  - pinyin: Orenji
+  - pinyin: orenji
     isKatakana: 1
-  - pinyin: Kiiro
+  - pinyin: kiiro
     isKatakana: 0
-  - pinyin: Ao
+  - pinyin: ao
     isKatakana: 0
-  - pinyin: Midori
+  - pinyin: midori
     isKatakana: 0
-  - pinyin: Mizuiro
+  - pinyin: mizuiro
     isKatakana: 0
-  - pinyin: Sorairo
+  - pinyin: sorairo
     isKatakana: 0
-  - pinyin: Aiiro
+  - pinyin: aiiro
     isKatakana: 0
-  - pinyin: Hadairo
+  - pinyin: hadairo
     isKatakana: 0
-  - pinyin: Kuro
+  - pinyin: kuro
     isKatakana: 0
-  - pinyin: Sjiro
+  - pinyin: shiro
     isKatakana: 0
-  - pinyin: Kiniro
+  - pinyin: kinniro
     isKatakana: 0
-  - pinyin: Giniro
+  - pinyin: ginniro
     isKatakana: 0
-  - pinyin: Chairo
+  - pinyin: chairo
     isKatakana: 0
-  - pinyin: Nijiiro
+  - pinyin: nijiiro
     isKatakana: 0
   chapter11:
-  - pinyin: Zero
+  - pinyin: zero
     isKatakana: 1
-  - pinyin: Ichi
+  - pinyin: ichi
     isKatakana: 0
-  - pinyin: Ni
+  - pinyin: ni
     isKatakana: 0
-  - pinyin: San
+  - pinyin: san
     isKatakana: 0
-  - pinyin: Shi
+  - pinyin: yon
     isKatakana: 0
-  - pinyin: Go
+  - pinyin: go
     isKatakana: 0
-  - pinyin: Roku
+  - pinyin: roku
     isKatakana: 0
-  - pinyin: Shichi
+  - pinyin: nana
     isKatakana: 0
-  - pinyin: Hachi
+  - pinyin: hachi
     isKatakana: 0
-  - pinyin: Kyuu
+  - pinyin: kyuu
     isKatakana: 0
-  - pinyin: Juu
+  - pinyin: juu
     isKatakana: 0
-  - pinyin: Nijuu
+  - pinyin: nijuu
     isKatakana: 0
-  - pinyin: Sanjuu
+  - pinyin: sanjuu
     isKatakana: 0
-  - pinyin: Yonjuu
+  - pinyin: yonjuu
     isKatakana: 0
-  - pinyin: Gojuu
+  - pinyin: gojuu
     isKatakana: 0
-  - pinyin: Rokujuu
+  - pinyin: rokujuu
     isKatakana: 0
-  - pinyin: Nanajuu
+  - pinyin: nanajuu
     isKatakana: 0
-  - pinyin: Hachijuu
+  - pinyin: hachijuu
     isKatakana: 0
-  - pinyin: Kyuujuu
+  - pinyin: kyuujuu
     isKatakana: 0
 --- !u!1 &8444519686692436419
 GameObject:
