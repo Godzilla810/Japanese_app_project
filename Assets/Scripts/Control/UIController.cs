@@ -7,6 +7,9 @@ using TMPro;
 public class UIController : MonoBehaviour
 {
     //物件
+    public GameObject panel;
+    public Sprite dayBackGround;
+    public Sprite nightBackGround;
     public GameObject slider;
     public GameObject image;
     public GameObject pinyin;
@@ -20,9 +23,13 @@ public class UIController : MonoBehaviour
     public void SetUpLearnModeUI()
     {
         slider.SetActive(false);
+        panel.GetComponent<Image>().sprite = dayBackGround;
+
     }
     public void SetUpChallengeModeUI(){
-            slider.SetActive(true);
+        slider.SetActive(true);
+        panel.GetComponent<Image>().sprite = nightBackGround;
+
     }
     public void SetUpBasicTopicUI(){
         image.SetActive(false);
@@ -37,7 +44,7 @@ public class UIController : MonoBehaviour
         //LevelData
         image.GetComponent<Image>().sprite = levelData.image;
         pinyin.GetComponent<TextMeshProUGUI>().text = levelData.pinyin;
-        soundBtn.GetComponent<AudioSource>().clip = levelData.audio;
+        soundBtn.GetComponent<AudioSource>().clip = levelData.audioClip;
         //OptionData
         for (int i = 0; i < optionImg.Count; i++)
         {

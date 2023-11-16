@@ -145,7 +145,9 @@ public class GameController : MonoBehaviour
 
     IEnumerator WaitAndStartLevel()
     {
-        yield return new WaitForSeconds(0.5f);
+        Time.timeScale = 0f;
+        yield return new WaitForSecondsRealtime(0.6f);
+        Time.timeScale = 1f;
         uiController.HideFeedBack();
         StartLevel();
     }

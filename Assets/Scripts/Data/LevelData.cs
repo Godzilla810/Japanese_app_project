@@ -6,22 +6,52 @@ using UnityEngine;
 [System.Serializable]
 public class LevelData
 {
-    public Sprite image;
+    public int chapterIndex { get; private set; }
     public string pinyin;
     public bool isKatakana;
-    public AudioClip audio;
+    public Sprite image { get; private set; }
+    public AudioClip audioClip { get; private set; }
     public List<string> answer { get; private set; }
     public List<Sprite> answerImg { get; private set; }
-    public LevelData(Sprite image, string pinyin, bool isKatakana, AudioClip audio)
+    public LevelData(int chapterIndex, string pinyin, bool isKatakana)
     {
-        this.image = image;
+        this.chapterIndex = chapterIndex;
         this.pinyin = pinyin;
         this.isKatakana = isKatakana;
-        this.audio = audio;
+        this.image = SetIamge();
+        this.audioClip = SetAudio();
         this.answer = new List<string>();
         this.answerImg = new List<Sprite>();
         SetAnswer();
         SetAnswerImage();
+    }
+    private Sprite SetIamge()
+    {
+        string folderPath = $"Chapter{chapterIndex}/Pictures";
+        Sprite[] sprites = Resources.LoadAll<Sprite>(folderPath);
+        foreach (Sprite sprite in sprites)
+        {
+            if (sprite.name == pinyin)
+            {
+                return sprite;
+            } 
+        }
+        Debug.Log("Image not found");
+        return null;
+    }
+    private AudioClip SetAudio()
+    {
+        string folderPath = $"Chapter{chapterIndex}/Sounds";
+        AudioClip[] audios = Resources.LoadAll<AudioClip>(folderPath);
+        foreach (AudioClip audio in audios)
+        {
+            if (audio.name == pinyin)
+            {
+                return audio;
+            } 
+        }
+        Debug.Log("Audio not found");
+        return null;
     }
     private void SetAnswer()
     {
@@ -90,16 +120,23 @@ public class LevelData
     }
     private void SetAnswerImage()
     {
+        bool isFound;
         string folderPath = isKatakana ? "JPChars/Katakana" : "JPChars/Hiragana";
         Sprite[] sprites = Resources.LoadAll<Sprite>(folderPath);
         foreach (string word in answer)
         {
+            isFound = false;
             foreach (Sprite sprite in sprites)
             {
                 if (sprite.name == word)
                 {
                     answerImg.Add(sprite);
+                    isFound = true;
                 }
+            }
+            if (!isFound)
+            {
+                Debug.LogError(word + " not found");
             }
         }
         
