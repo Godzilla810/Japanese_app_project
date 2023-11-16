@@ -38,8 +38,8 @@ public class LevelGenerator : MonoBehaviour
         currentChapter = chapters[GlobalData.chapter - 1];
         if (levelIndex >= 0 && levelIndex < currentChapter.Length)
         {
-            LevelData levelData = new LevelData(currentChapter[levelIndex].image, 
-            currentChapter[levelIndex].pinyin, currentChapter[levelIndex].audio);
+            LevelData levelData = new LevelData(currentChapter[levelIndex].image, currentChapter[levelIndex].pinyin, 
+            currentChapter[levelIndex].isKatakana, currentChapter[levelIndex].audio);
             return levelData;
         }
         return null;

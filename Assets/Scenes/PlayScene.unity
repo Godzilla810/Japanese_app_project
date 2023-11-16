@@ -7336,121 +7336,157 @@ MonoBehaviour:
   chapter1:
   - image: {fileID: 21300000, guid: b0805d851910e3c4ab4792b9be2c69f3, type: 3}
     pinyin: a
+    isKatakana: 0
     audio: {fileID: 8300000, guid: 1f2072a2b91062b408e36160f105b901, type: 3}
   - image: {fileID: 21300000, guid: 6294c9edc2b30ff4aabe8a288cec6d10, type: 3}
     pinyin: i
+    isKatakana: 0
     audio: {fileID: 8300000, guid: 0cad382acb2fb4e4fb503784afaa15db, type: 3}
   - image: {fileID: 21300000, guid: 6891374187ecb654eb2c2c6994331b2d, type: 3}
     pinyin: u
+    isKatakana: 0
     audio: {fileID: 8300000, guid: d9bb86ba9f4fd4e4a88007069beb22fc, type: 3}
   - image: {fileID: 21300000, guid: eb320ccadaa10224585b46f75f87edbb, type: 3}
     pinyin: e
+    isKatakana: 0
     audio: {fileID: 8300000, guid: 25055a68bb0043b469f5bd7787eeda25, type: 3}
   - image: {fileID: 21300000, guid: 38b2ecb4c295c47488cd257178de0423, type: 3}
     pinyin: o
+    isKatakana: 0
     audio: {fileID: 8300000, guid: 00b287609f9f41a4db0c255294171f2f, type: 3}
   chapter2:
   - image: {fileID: 21300000, guid: 8abc7e1e60329f7488a723597bd26be1, type: 3}
     pinyin: ga
+    isKatakana: 0
     audio: {fileID: 8300000, guid: 402c30adcb525e04a8facda1e92f8ad6, type: 3}
   - image: {fileID: 21300000, guid: ad0713ae77b1e0f469a168836731c192, type: 3}
     pinyin: gi
+    isKatakana: 0
     audio: {fileID: 8300000, guid: 71adffa162002c3499a3f9894fd960f2, type: 3}
   chapter3:
   - image: {fileID: 0}
     pinyin: 
+    isKatakana: 0
     audio: {fileID: 0}
   - image: {fileID: 0}
     pinyin: 
+    isKatakana: 0
     audio: {fileID: 0}
   chapter4:
   - image: {fileID: 0}
     pinyin: 
+    isKatakana: 0
     audio: {fileID: 0}
   - image: {fileID: 0}
     pinyin: 
+    isKatakana: 0
     audio: {fileID: 0}
   chapter5:
   - image: {fileID: 0}
     pinyin: 
+    isKatakana: 0
     audio: {fileID: 0}
   - image: {fileID: 0}
     pinyin: 
+    isKatakana: 0
     audio: {fileID: 0}
   chapter6:
   - image: {fileID: 0}
     pinyin: 
+    isKatakana: 0
     audio: {fileID: 0}
   - image: {fileID: 0}
     pinyin: 
+    isKatakana: 0
     audio: {fileID: 0}
   chapter7:
   - image: {fileID: 0}
     pinyin: 
+    isKatakana: 0
     audio: {fileID: 0}
   - image: {fileID: 0}
     pinyin: 
+    isKatakana: 0
     audio: {fileID: 0}
   chapter8:
   - image: {fileID: 0}
     pinyin: 
+    isKatakana: 0
     audio: {fileID: 0}
   - image: {fileID: 0}
     pinyin: 
+    isKatakana: 0
     audio: {fileID: 0}
   chapter9:
   - image: {fileID: 21300000, guid: a83e8448ce15b68478b66195fbeef607, type: 3}
     pinyin: JinRiKiSha
+    isKatakana: 0
     audio: {fileID: 8300000, guid: 567a57e4b9db6884d8fd2c4c3d9a4ca0, type: 3}
   - image: {fileID: 0}
-    pinyin: ChiNoRe-Ru
+    pinyin: MoNoRe-Ru
+    isKatakana: 1
     audio: {fileID: 8300000, guid: 6f285ca293e602042aa8445150280e6f, type: 3}
   - image: {fileID: 0}
     pinyin: BaiKu
+    isKatakana: 1
     audio: {fileID: 8300000, guid: 1b65619678890ae46932bbf5219f5e09, type: 3}
   - image: {fileID: 0}
     pinyin: ShinKanSen
+    isKatakana: 0
     audio: {fileID: 8300000, guid: f518e65c858213e49b8aa8ceedc8bee7, type: 3}
   - image: {fileID: 0}
     pinyin: KuRuMa
+    isKatakana: 0
     audio: {fileID: 8300000, guid: e970cbec8e46e79408915c5047eedd4d, type: 3}
   - image: {fileID: 0}
     pinyin: FueRi-
+    isKatakana: 1
     audio: {fileID: 8300000, guid: fa6eb752e1824f44e9c4dbda0f9ab7db, type: 3}
   - image: {fileID: 0}
     pinyin: KiSha
+    isKatakana: 0
     audio: {fileID: 8300000, guid: abbd2087708978246b2e5168eddecbc5, type: 3}
   - image: {fileID: 0}
     pinyin: HiKouKi
+    isKatakana: 0
     audio: {fileID: 8300000, guid: 0ef9b5fc271342e4b8ec05af9beee64f, type: 3}
   - image: {fileID: 0}
     pinyin: JiTenSha
+    isKatakana: 0
     audio: {fileID: 8300000, guid: 0da10e9c8e227984aabb791180f8d1bc, type: 3}
   - image: {fileID: 0}
     pinyin: FuNe
+    isKatakana: 0
     audio: {fileID: 8300000, guid: 98a79cfa4dc0fe7478f5d02163b9f4f5, type: 3}
   - image: {fileID: 0}
     pinyin: TaKuShi-
+    isKatakana: 1
     audio: {fileID: 8300000, guid: 3a79ce8a4f9697948be39d644b48ae71, type: 3}
   - image: {fileID: 0}
     pinyin: HiKouKi
+    isKatakana: 0
     audio: {fileID: 8300000, guid: d758ce30551f5ff4aa5088411a691712, type: 3}
   chapter10:
   - image: {fileID: 0}
     pinyin: 
+    isKatakana: 0
     audio: {fileID: 0}
   - image: {fileID: 0}
     pinyin: 
+    isKatakana: 0
     audio: {fileID: 0}
   chapter11:
   - image: {fileID: 21300000, guid: 04828cd7156fa53449ff34b004627787, type: 3}
     pinyin: hikouki
+    isKatakana: 0
     audio: {fileID: 8300000, guid: 470c8e0a5b14cb146b19ae0c409c39e2, type: 3}
   - image: {fileID: 21300000, guid: 8eb4969bb6111f949b647fc7af4d9aea, type: 3}
     pinyin: neko
+    isKatakana: 0
     audio: {fileID: 8300000, guid: a92cacd3fb8c4f34a9a92df85af8924f, type: 3}
   - image: {fileID: 21300000, guid: 8eb4969bb6111f949b647fc7af4d9aea, type: 3}
     pinyin: neko
+    isKatakana: 0
     audio: {fileID: 8300000, guid: a92cacd3fb8c4f34a9a92df85af8924f, type: 3}
 --- !u!1 &8444519686692436419
 GameObject:

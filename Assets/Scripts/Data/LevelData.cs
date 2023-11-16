@@ -8,13 +8,15 @@ public class LevelData
 {
     public Sprite image;
     public string pinyin;
+    public bool isKatakana;
     public AudioClip audio;
     public List<string> answer { get; private set; }
     public List<Sprite> answerImg { get; private set; }
-    public LevelData(Sprite image, string pinyin, AudioClip audio)
+    public LevelData(Sprite image, string pinyin, bool isKatakana, AudioClip audio)
     {
         this.image = image;
         this.pinyin = pinyin;
+        this.isKatakana = isKatakana;
         this.audio = audio;
         this.answer = new List<string>();
         this.answerImg = new List<Sprite>();
@@ -88,17 +90,14 @@ public class LevelData
     }
     private void SetAnswerImage()
     {
-        string folderPath = "JPChars";  //指定五十音資料夾路徑
+        string folderPath = isKatakana ? "JPChars/Katakana" : "JPChars/Hiragana";
         Sprite[] sprites = Resources.LoadAll<Sprite>(folderPath);
-        // Debug.Log(sprites.Length);
         foreach (string word in answer)
         {
             foreach (Sprite sprite in sprites)
             {
-                // Debug.Log(word);
                 if (sprite.name == word)
                 {
-                    // Debug.Log(word + " find");
                     answerImg.Add(sprite);
                 }
             }
