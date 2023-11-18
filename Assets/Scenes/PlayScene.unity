@@ -7380,30 +7380,30 @@ MonoBehaviour:
   - pinyin: 
     isKatakana: 0
   chapter9:
+  - pinyin: jinrikisha
+    isKatakana: 0
+  - pinyin: jitensha
+    isKatakana: 0
+  - pinyin: otobai
+    isKatakana: 1
+  - pinyin: takushi-
+    isKatakana: 1
+  - pinyin: jidou-sha
+    isKatakana: 0
+  - pinyin: shinkansen
+    isKatakana: 0
+  - pinyin: monore-ru
+    isKatakana: 1
   - pinyin: bo-to
     isKatakana: 1
-  - pinyin: densha
-    isKatakana: 0
   - pinyin: feri-
     isKatakana: 1
   - pinyin: herikoputa-
     isKatakana: 1
   - pinyin: hikouki
     isKatakana: 0
-  - pinyin: jinrikisha
+  - pinyin: densha
     isKatakana: 0
-  - pinyin: jitensha
-    isKatakana: 0
-  - pinyin: kisha
-    isKatakana: 1
-  - pinyin: monore-ru
-    isKatakana: 1
-  - pinyin: otobai
-    isKatakana: 1
-  - pinyin: shinkansen
-    isKatakana: 0
-  - pinyin: takushi-
-    isKatakana: 1
   chapter10:
   - pinyin: aka
     isKatakana: 0

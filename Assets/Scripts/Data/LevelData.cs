@@ -162,7 +162,7 @@ public class LevelData
             }
             if (!isFound)
             {
-                Debug.LogError(word + " not found");
+                Debug.Log(word + " not found");
             }
         }
         
