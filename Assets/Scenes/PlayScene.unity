@@ -7344,36 +7344,284 @@ MonoBehaviour:
     isKatakana: 0
   - pinyin: o
     isKatakana: 0
+  - pinyin: ka
+    isKatakana: 0
+  - pinyin: ki
+    isKatakana: 0
+  - pinyin: ku
+    isKatakana: 0
+  - pinyin: ke
+    isKatakana: 0
+  - pinyin: ko
+    isKatakana: 0
+  - pinyin: sa
+    isKatakana: 0
+  - pinyin: shi
+    isKatakana: 0
+  - pinyin: su
+    isKatakana: 0
+  - pinyin: se
+    isKatakana: 0
+  - pinyin: so
+    isKatakana: 0
+  - pinyin: ta
+    isKatakana: 0
+  - pinyin: chi
+    isKatakana: 0
+  - pinyin: te
+    isKatakana: 0
+  - pinyin: to
+    isKatakana: 0
+  - pinyin: na
+    isKatakana: 0
+  - pinyin: ni
+    isKatakana: 0
+  - pinyin: nu
+    isKatakana: 0
+  - pinyin: ne
+    isKatakana: 0
+  - pinyin: no
+    isKatakana: 0
+  - pinyin: ha
+    isKatakana: 0
+  - pinyin: hi
+    isKatakana: 0
+  - pinyin: fu
+    isKatakana: 0
+  - pinyin: he
+    isKatakana: 0
+  - pinyin: ho
+    isKatakana: 0
+  - pinyin: ma
+    isKatakana: 0
+  - pinyin: mi
+    isKatakana: 0
+  - pinyin: mu
+    isKatakana: 0
+  - pinyin: me
+    isKatakana: 0
+  - pinyin: mo
+    isKatakana: 0
+  - pinyin: ya
+    isKatakana: 0
+  - pinyin: yu
+    isKatakana: 0
+  - pinyin: yo
+    isKatakana: 0
+  - pinyin: ra
+    isKatakana: 0
+  - pinyin: ri
+    isKatakana: 0
+  - pinyin: ru
+    isKatakana: 0
+  - pinyin: re
+    isKatakana: 0
+  - pinyin: ro
+    isKatakana: 0
+  - pinyin: wa
+    isKatakana: 0
+  - pinyin: wo
+    isKatakana: 0
+  - pinyin: n
+    isKatakana: 0
   chapter2:
   - pinyin: ga
     isKatakana: 0
   - pinyin: gi
     isKatakana: 0
-  chapter3:
-  - pinyin: 
+  - pinyin: gu
     isKatakana: 0
-  - pinyin: 
+  - pinyin: ge
+    isKatakana: 0
+  - pinyin: go
+    isKatakana: 0
+  - pinyin: za
+    isKatakana: 0
+  - pinyin: ji
+    isKatakana: 0
+  - pinyin: zu
+    isKatakana: 0
+  - pinyin: ze
+    isKatakana: 0
+  - pinyin: zo
+    isKatakana: 0
+  - pinyin: da
+    isKatakana: 0
+  - pinyin: di
+    isKatakana: 0
+  - pinyin: du
+    isKatakana: 0
+  - pinyin: de
+    isKatakana: 0
+  - pinyin: do
+    isKatakana: 0
+  - pinyin: ba
+    isKatakana: 0
+  - pinyin: bi
+    isKatakana: 0
+  - pinyin: bu
+    isKatakana: 0
+  - pinyin: be
+    isKatakana: 0
+  - pinyin: bo
+    isKatakana: 0
+  chapter3:
+  - pinyin: pa
+    isKatakana: 0
+  - pinyin: pi
+    isKatakana: 0
+  - pinyin: pu
+    isKatakana: 0
+  - pinyin: pe
+    isKatakana: 0
+  - pinyin: po
     isKatakana: 0
   chapter4:
-  - pinyin: 
-    isKatakana: 0
-  - pinyin: 
-    isKatakana: 0
+  - pinyin: cha
+    isKatakana: 1
   chapter5:
-  - pinyin: 
-    isKatakana: 0
-  - pinyin: 
-    isKatakana: 0
+  - pinyin: a
+    isKatakana: 1
+  - pinyin: i
+    isKatakana: 1
+  - pinyin: u
+    isKatakana: 1
+  - pinyin: e
+    isKatakana: 1
+  - pinyin: o
+    isKatakana: 1
+  - pinyin: ka
+    isKatakana: 1
+  - pinyin: ki
+    isKatakana: 1
+  - pinyin: ku
+    isKatakana: 1
+  - pinyin: ke
+    isKatakana: 1
+  - pinyin: ko
+    isKatakana: 1
+  - pinyin: sa
+    isKatakana: 1
+  - pinyin: shi
+    isKatakana: 1
+  - pinyin: su
+    isKatakana: 1
+  - pinyin: se
+    isKatakana: 1
+  - pinyin: so
+    isKatakana: 1
+  - pinyin: ta
+    isKatakana: 1
+  - pinyin: chi
+    isKatakana: 1
+  - pinyin: te
+    isKatakana: 1
+  - pinyin: to
+    isKatakana: 1
+  - pinyin: na
+    isKatakana: 1
+  - pinyin: ni
+    isKatakana: 1
+  - pinyin: nu
+    isKatakana: 1
+  - pinyin: ne
+    isKatakana: 1
+  - pinyin: no
+    isKatakana: 1
+  - pinyin: ha
+    isKatakana: 1
+  - pinyin: hi
+    isKatakana: 1
+  - pinyin: fu
+    isKatakana: 1
+  - pinyin: he
+    isKatakana: 1
+  - pinyin: ho
+    isKatakana: 1
+  - pinyin: ma
+    isKatakana: 1
+  - pinyin: mi
+    isKatakana: 1
+  - pinyin: mu
+    isKatakana: 1
+  - pinyin: me
+    isKatakana: 1
+  - pinyin: mo
+    isKatakana: 1
+  - pinyin: ya
+    isKatakana: 1
+  - pinyin: yu
+    isKatakana: 1
+  - pinyin: yo
+    isKatakana: 1
+  - pinyin: ra
+    isKatakana: 1
+  - pinyin: ri
+    isKatakana: 1
+  - pinyin: ro
+    isKatakana: 1
+  - pinyin: re
+    isKatakana: 1
+  - pinyin: ro
+    isKatakana: 1
+  - pinyin: wa
+    isKatakana: 1
+  - pinyin: wo
+    isKatakana: 1
+  - pinyin: n
+    isKatakana: 1
   chapter6:
-  - pinyin: 
-    isKatakana: 0
-  - pinyin: 
-    isKatakana: 0
+  - pinyin: ga
+    isKatakana: 1
+  - pinyin: gi
+    isKatakana: 1
+  - pinyin: gu
+    isKatakana: 1
+  - pinyin: ge
+    isKatakana: 1
+  - pinyin: go
+    isKatakana: 1
+  - pinyin: za
+    isKatakana: 1
+  - pinyin: ji
+    isKatakana: 1
+  - pinyin: zu
+    isKatakana: 1
+  - pinyin: ze
+    isKatakana: 1
+  - pinyin: zo
+    isKatakana: 1
+  - pinyin: da
+    isKatakana: 1
+  - pinyin: di
+    isKatakana: 1
+  - pinyin: du
+    isKatakana: 1
+  - pinyin: de
+    isKatakana: 1
+  - pinyin: do
+    isKatakana: 1
+  - pinyin: ba
+    isKatakana: 1
+  - pinyin: bi
+    isKatakana: 1
+  - pinyin: bu
+    isKatakana: 1
+  - pinyin: be
+    isKatakana: 1
+  - pinyin: bo
+    isKatakana: 1
   chapter7:
-  - pinyin: 
-    isKatakana: 0
-  - pinyin: 
-    isKatakana: 0
+  - pinyin: pa
+    isKatakana: 1
+  - pinyin: pi
+    isKatakana: 1
+  - pinyin: pu
+    isKatakana: 1
+  - pinyin: pe
+    isKatakana: 1
+  - pinyin: po
+    isKatakana: 1
   chapter8:
   - pinyin: 
     isKatakana: 0
@@ -7384,7 +7632,7 @@ MonoBehaviour:
     isKatakana: 0
   - pinyin: jitensha
     isKatakana: 0
-  - pinyin: otobai
+  - pinyin: o-tobai
     isKatakana: 1
   - pinyin: takushi-
     isKatakana: 1
