@@ -233,7 +233,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4440414581975922729, guid: f6729b6e2af845c47b5ae4a868dfb8ee, type: 3}
       propertyPath: m_text
-      value: "\u534A\u6FC1\u97F3"
+      value: "\u6FC1\u97F3"
       objectReference: {fileID: 0}
     - target: {fileID: 4440414582780460276, guid: f6729b6e2af845c47b5ae4a868dfb8ee, type: 3}
       propertyPath: m_Name
@@ -2592,7 +2592,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4440414581975922729, guid: f6729b6e2af845c47b5ae4a868dfb8ee, type: 3}
       propertyPath: m_text
-      value: "\u6FC1\u97F3"
+      value: "\u534A\u6FC1\u97F3"
       objectReference: {fileID: 0}
     - target: {fileID: 4440414582780460276, guid: f6729b6e2af845c47b5ae4a868dfb8ee, type: 3}
       propertyPath: m_Name
