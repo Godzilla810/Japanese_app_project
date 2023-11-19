@@ -73,6 +73,7 @@ public class LevelData
             //遇到N:先標記，如果接下來是子音，就結束片段
             else if (character == 'n')
             {
+                //nn特例:Ginniro
                 if (encounterN)
                 {
                     encounterN = false;
@@ -91,7 +92,7 @@ public class LevelData
                 encounterN = false;
                 currentSubString += character.ToString();
                 //抝音
-                if ((currentSubString.Length > 2 && currentSubString != "shi" && currentSubString != "chi") || 
+                if ((currentSubString.Length > 2 && currentSubString != "shi" && currentSubString != "chi" && currentSubString != "tsu") || 
                     (currentSubString == "ja" || currentSubString == "ju" || currentSubString == "jo"))
                 {
                     string firstWord;
@@ -132,7 +133,8 @@ public class LevelData
             //遇到n以外的子音:加入片段
             else
             {
-                if (encounterN)
+                //輸出n，同時避免n類抝音被擋
+                if (encounterN && character != 'y')
                 {
                     encounterN = false;
                     answer.Add(currentSubString);

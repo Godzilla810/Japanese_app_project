@@ -7368,6 +7368,8 @@ MonoBehaviour:
     isKatakana: 0
   - pinyin: chi
     isKatakana: 0
+  - pinyin: tsu
+    isKatakana: 0
   - pinyin: te
     isKatakana: 0
   - pinyin: to
@@ -7477,8 +7479,72 @@ MonoBehaviour:
   - pinyin: po
     isKatakana: 0
   chapter4:
+  - pinyin: kya
+    isKatakana: 0
+  - pinyin: kyu
+    isKatakana: 0
+  - pinyin: kyo
+    isKatakana: 0
+  - pinyin: sha
+    isKatakana: 0
+  - pinyin: shu
+    isKatakana: 0
+  - pinyin: sho
+    isKatakana: 0
   - pinyin: cha
-    isKatakana: 1
+    isKatakana: 0
+  - pinyin: chu
+    isKatakana: 0
+  - pinyin: cho
+    isKatakana: 0
+  - pinyin: nya
+    isKatakana: 0
+  - pinyin: nyu
+    isKatakana: 0
+  - pinyin: nyo
+    isKatakana: 0
+  - pinyin: hya
+    isKatakana: 0
+  - pinyin: hyu
+    isKatakana: 0
+  - pinyin: hyo
+    isKatakana: 0
+  - pinyin: mya
+    isKatakana: 0
+  - pinyin: myu
+    isKatakana: 0
+  - pinyin: myo
+    isKatakana: 0
+  - pinyin: rya
+    isKatakana: 0
+  - pinyin: ryu
+    isKatakana: 0
+  - pinyin: ryo
+    isKatakana: 0
+  - pinyin: gya
+    isKatakana: 0
+  - pinyin: gyu
+    isKatakana: 0
+  - pinyin: gyo
+    isKatakana: 0
+  - pinyin: ja
+    isKatakana: 0
+  - pinyin: ju
+    isKatakana: 0
+  - pinyin: jo
+    isKatakana: 0
+  - pinyin: bya
+    isKatakana: 0
+  - pinyin: byu
+    isKatakana: 0
+  - pinyin: byo
+    isKatakana: 0
+  - pinyin: pya
+    isKatakana: 0
+  - pinyin: pyu
+    isKatakana: 0
+  - pinyin: pyo
+    isKatakana: 0
   chapter5:
   - pinyin: a
     isKatakana: 1
@@ -7623,10 +7689,72 @@ MonoBehaviour:
   - pinyin: po
     isKatakana: 1
   chapter8:
-  - pinyin: 
-    isKatakana: 0
-  - pinyin: 
-    isKatakana: 0
+  - pinyin: kya
+    isKatakana: 1
+  - pinyin: kyu
+    isKatakana: 1
+  - pinyin: kyo
+    isKatakana: 1
+  - pinyin: sha
+    isKatakana: 1
+  - pinyin: shu
+    isKatakana: 1
+  - pinyin: sho
+    isKatakana: 1
+  - pinyin: cha
+    isKatakana: 1
+  - pinyin: chu
+    isKatakana: 1
+  - pinyin: cho
+    isKatakana: 1
+  - pinyin: nya
+    isKatakana: 1
+  - pinyin: nyu
+    isKatakana: 1
+  - pinyin: nyo
+    isKatakana: 1
+  - pinyin: hya
+    isKatakana: 1
+  - pinyin: hyu
+    isKatakana: 1
+  - pinyin: hyo
+    isKatakana: 1
+  - pinyin: mya
+    isKatakana: 1
+  - pinyin: myu
+    isKatakana: 1
+  - pinyin: myo
+    isKatakana: 1
+  - pinyin: rya
+    isKatakana: 1
+  - pinyin: ryu
+    isKatakana: 1
+  - pinyin: ryo
+    isKatakana: 1
+  - pinyin: gya
+    isKatakana: 1
+  - pinyin: gyu
+    isKatakana: 1
+  - pinyin: gyo
+    isKatakana: 1
+  - pinyin: ja
+    isKatakana: 1
+  - pinyin: ju
+    isKatakana: 1
+  - pinyin: jo
+    isKatakana: 1
+  - pinyin: bya
+    isKatakana: 1
+  - pinyin: byu
+    isKatakana: 1
+  - pinyin: byo
+    isKatakana: 1
+  - pinyin: pya
+    isKatakana: 1
+  - pinyin: pyu
+    isKatakana: 1
+  - pinyin: pyo
+    isKatakana: 1
   chapter9:
   - pinyin: jinrikisha
     isKatakana: 0

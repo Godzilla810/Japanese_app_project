@@ -18,4 +18,9 @@ public class SetParameter : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+    public void ClearPlayerPrefs()
+    {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+    }
 }

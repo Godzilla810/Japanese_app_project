@@ -20,13 +20,11 @@ public class GameController : MonoBehaviour
     public OptionGenerator optionGenerator;
     public UIController uiController;
 
-    [HideInInspector]
-    public string playerAnswer;
-    [HideInInspector]
-    public string trueAnswer;
+    private string playerAnswer;
+    private string trueAnswer;
 
     public float limitedTime = 10.0f;
-    public int levelCount = 5;
+    public int levelCount = 10;
 
     public Transform answerArea;
     private bool isLearn;
@@ -45,13 +43,14 @@ public class GameController : MonoBehaviour
     void Update()
     {
         Debug.Log(playerAnswer + "/" + trueAnswer);
-
+        //學習模式正確情況
         if (isLearn && playerAnswer == trueAnswer)
         {
             playerAnswer = "";
             uiController.ShowCorrect();
             StartCoroutine(WaitAndStartLevel());
         }
+        //挑戰模式正確情況
         else if (!isLearn && playerAnswer == trueAnswer)
         {
             isInterrupt = true;
@@ -59,6 +58,7 @@ public class GameController : MonoBehaviour
             uiController.ShowCorrect();
             StartCoroutine(WaitAndStartLevel());
         }
+        //挑戰模式錯誤情況
         else if (!isLearn && isTimesUp)
         {
             isTimesUp = false;
@@ -136,8 +136,12 @@ public class GameController : MonoBehaviour
         }
         else
         {
+            //挑戰模式過關
             if (error < 3)
+            {
                 uiController.ShowGoodEnd();
+                PlayerPrefs.SetInt($"Chapter{GlobalData.chapter}Completed", 1);
+            }
             else
                 uiController.ShowBadEnd();
         }
