@@ -33,6 +33,10 @@ public class UIController : MonoBehaviour
     }
     public void SetUpBasicTopicUI(){
         image.SetActive(false);
+        pinyin.GetComponent<RectTransform>().sizeDelta = new Vector2(800, 200);
+        pinyin.GetComponent<RectTransform>().anchoredPosition = new Vector2(-400, 500);
+        pinyin.GetComponent<TextMeshProUGUI>().alignment = TextAlignmentOptions.Center;
+        pinyin.GetComponent<TextMeshProUGUI>().fontSize = 150;
         soundBtn.SetActive(false);
     }
     public void SetUpAdvancedTopicUI(){
@@ -45,6 +49,7 @@ public class UIController : MonoBehaviour
         image.GetComponent<Image>().sprite = levelData.image;
         pinyin.GetComponent<TextMeshProUGUI>().text = levelData.pinyin;
         soundBtn.GetComponent<AudioSource>().clip = levelData.audioClip;
+        soundBtn.GetComponent<AudioSource>().Play();
         //OptionData
         for (int i = 0; i < optionImg.Count; i++)
         {
@@ -52,6 +57,7 @@ public class UIController : MonoBehaviour
             options[i].GetComponent<Image>().sprite = optionImg[i];
         }
     }
+    
     public void ShowCorrect()
     {
         correct.SetActive(true);

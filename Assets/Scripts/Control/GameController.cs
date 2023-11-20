@@ -29,6 +29,7 @@ public class GameController : MonoBehaviour
     public Transform answerArea;
     private bool isLearn;
     private int currentLevelIndex;
+    private LevelData currentLevelData;
     private int error = 0;
     private bool isPause = false;
     private bool isInterrupt = false;
@@ -65,7 +66,7 @@ public class GameController : MonoBehaviour
             error++;
             playerAnswer = "";
             uiController.ShowWrong();
-            StartCoroutine(WaitAndStartLevel());
+            StartCoroutine(ShowAnswer(currentLevelData.answer));
         }
     }
 
@@ -110,11 +111,11 @@ public class GameController : MonoBehaviour
 
     void StartSequentialLevel()
     {
-        LevelData levelData = levelGenerator.GenerateLevel(currentLevelIndex);
+        currentLevelData = levelGenerator.GenerateLevel(currentLevelIndex);
 
-        if (levelData != null)
+        if (currentLevelData != null)
         {
-            BuildLevel(levelData);
+            BuildLevel(currentLevelData);
             currentLevelIndex++;
         }
         else
@@ -126,11 +127,11 @@ public class GameController : MonoBehaviour
     void StartRandomLevel()
     {
         int levelIndex = Random.Range(0, levelGenerator.GetChapterLength());
-        LevelData levelData = levelGenerator.GenerateLevel(levelIndex);
+        currentLevelData = levelGenerator.GenerateLevel(levelIndex);
 
         if (currentLevelIndex < levelCount)
         {
-            BuildLevel(levelData);
+            BuildLevel(currentLevelData);
             StartCoroutine(StartTimer());
             currentLevelIndex++;
         }
@@ -154,6 +155,29 @@ public class GameController : MonoBehaviour
         Time.timeScale = 1f;
         uiController.HideFeedBack();
         StartLevel();
+    }
+
+    IEnumerator ShowAnswer(List<string> answer)
+    {
+        GameObject[] options = uiController.options;
+        //先歸位
+        for (int k = 0; k < options.Length; k++)
+        {
+            options[k].GetComponent<Option>().ChangeToOptionArea();
+        }
+        //放答案
+        for (int i = 0; i < answer.Count; i++)
+        {
+            for (int j = 0; j < options.Length; j++)
+            {
+                if (answer[i] == options[j].GetComponent<Image>().sprite.name)
+                {
+                    options[j].GetComponent<Option>().ChangeToAnswerArea();
+                    yield return new WaitForSecondsRealtime(0.2f);
+                }
+            }
+        }
+        StartCoroutine(WaitAndStartLevel());
     }
 
     IEnumerator StartTimer()
