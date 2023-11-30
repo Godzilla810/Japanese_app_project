@@ -18,6 +18,7 @@ public class SetParameter : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+    //清除玩家資料
     public void ClearPlayerPrefs()
     {
         PlayerPrefs.DeleteAll();
