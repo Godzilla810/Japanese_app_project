@@ -168,7 +168,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e29a82b3c97cfcd4095f193f9dc6daa4, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1047,8 +1047,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u4F7F\u7528\u898F\u7BC4"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 59e412305022061429eb64c8352f8ae8, type: 2}
-  m_sharedMaterial: {fileID: 7155702123233063567, guid: 59e412305022061429eb64c8352f8ae8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d698151447ccc2848b7e8dd829aa1feb, type: 2}
+  m_sharedMaterial: {fileID: 4746568079050909143, guid: d698151447ccc2848b7e8dd829aa1feb, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1262,8 +1262,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u5B50\u8521-\u7F8E\u8853\n\u54C8\u5BC6\u74DC-\u7A0B\u5F0F\n\u66C9\u767D-\u4F01\u5283\n\u67D2\u73A5-\u4F01\u5283,\u97F3\u6548\n\u963F\u5361\u8C93-\u5EFA\u6A21"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 59e412305022061429eb64c8352f8ae8, type: 2}
-  m_sharedMaterial: {fileID: 7155702123233063567, guid: 59e412305022061429eb64c8352f8ae8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d698151447ccc2848b7e8dd829aa1feb, type: 2}
+  m_sharedMaterial: {fileID: 4746568079050909143, guid: d698151447ccc2848b7e8dd829aa1feb, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1783,8 +1783,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u88FD\u4F5C\u540D\u55AE"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 59e412305022061429eb64c8352f8ae8, type: 2}
-  m_sharedMaterial: {fileID: 7155702123233063567, guid: 59e412305022061429eb64c8352f8ae8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d698151447ccc2848b7e8dd829aa1feb, type: 2}
+  m_sharedMaterial: {fileID: 4746568079050909143, guid: d698151447ccc2848b7e8dd829aa1feb, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1985,7 +1985,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 283c869bc67cba34cbd9de5c114dc1ed, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8935119, g: 0.905425, b: 0.9150943, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2004,7 +2004,7 @@ Transform:
   m_GameObject: {fileID: 2102740640}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -300, z: -14400}
-  m_LocalScale: {x: 144, y: 144, z: 144}
+  m_LocalScale: {x: 140, y: 140, z: 140}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 270672343}
